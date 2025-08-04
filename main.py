@@ -1,24 +1,27 @@
 import pygame
 import sys
+from pathlib import Path
 
 pygame.init()
 
+BASE_DIR = Path(__file__).resolve().parent
+
 screen = pygame.display.set_mode((1000, 754))
-background_image = pygame.image.load('D:\\python_learning\\labirint\\maze2.jpg')
+background_image = pygame.image.load(str(BASE_DIR / "maze2.jpg"))
 background_image = pygame.transform.scale(background_image, (1000, 754))
 
-dog_image = pygame.image.load('D:\\python_learning\\labirint\\dog.png')
+dog_image = pygame.image.load(str(BASE_DIR / "dog.png"))
 dog_image= pygame.transform.scale(dog_image, (50, 50))
 
 pygame.display.set_caption("Labirint")
 
-icon = pygame.image.load('D:\\python_learning\\labirint\\icon.png')
+icon = pygame.image.load(str(BASE_DIR / "icon.png"))
 
 pygame.display.set_icon(icon)
 font = pygame.font.Font(None, 90)
 
 def load_message_image(filename):
-    image = pygame.image.load(f'D:\\python_learning\\labirint\\{filename}')
+    image = pygame.image.load(str(BASE_DIR / filename))
     return image
 
 message_images = {
