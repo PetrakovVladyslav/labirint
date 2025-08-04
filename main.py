@@ -10,8 +10,6 @@ background_image = pygame.transform.scale(background_image, (1000, 754))
 dog_image = pygame.image.load('D:\\python_learning\\labirint\\dog.png')
 dog_image= pygame.transform.scale(dog_image, (50, 50))
 
-
-
 pygame.display.set_caption("Labirint")
 
 icon = pygame.image.load('D:\\python_learning\\labirint\\icon.png')
@@ -161,7 +159,3 @@ while running:
 
 pygame.quit()
 sys.exit()
-
-
-
-
